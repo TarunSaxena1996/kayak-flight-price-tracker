@@ -1,0 +1,5 @@
+encountered error : ModuleNotFoundError: No module named 'distutils'
+
+solved with-
+python3 -m ensurepip --default-pip
+python3 -m pip install --upgrade setuptools
