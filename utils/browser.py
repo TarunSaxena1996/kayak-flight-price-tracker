@@ -1,11 +1,15 @@
 # utils/browser.py
 import undetected_chromedriver as uc
-from selenium.webdriver.chrome.options import Options
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
 def launch_browser(headless=False):
-    options = uc.ChromeOptions()
+    #options = uc.ChromeOptions() used for by passing bot detection
+    options = webdriver.ChromeOptions()
     if headless:
-        options.headless = True
+        options.add_argument("--headless=new") 
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument("--start-maximized")
     options.add_argument("--disable-extensions")
@@ -13,5 +17,7 @@ def launch_browser(headless=False):
     options.add_argument("--disable-gpu")
     options.add_argument("--disable-dev-shm-usage")
 
-    driver = uc.Chrome(options=options)
+    # 🔹 Initialize WebDriver with ChromeOptions
+    service = Service()  # You can specify the path to chromedriver if needed
+    driver = webdriver.Chrome(service=service, options=options)
     return driver

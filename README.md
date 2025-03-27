@@ -32,7 +32,7 @@ project_root/
 
 ## ✅ Features
 - Scrapes round-trip flight details: Airline, From, To, Departure, Arrival, Return details, and Price.
-- Saves flight data in `data/tracked_prices.csv`.
+- Saves flight data in `data/flights_output.csv`.
 - Sends email notification if the price falls below a threshold.
 
 ---
