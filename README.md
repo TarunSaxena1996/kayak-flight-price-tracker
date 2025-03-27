@@ -8,24 +8,28 @@ A web scraping tool built with **Selenium** and **BeautifulSoup** that tracks ro
 ```
 project_root/
 │
-├── data/
-│   └── tracked_prices.csv            # Scraped flight data
+├── output/
+│   ├── flights_output.csv            # Scraped flight data
+|   └── email_notification.png        # screenshot of email received
 │
 ├── screenshots/                      # Stores screenshots if needed during debugging
 │
 ├── utils/
 │   ├── browser.py                    # Browser initialization code
 │   ├── notifier.py                   # Email sending logic
-│   └── tracker.py                    # Flight scraping and CSV export logic
+│   ├── parser.py                     # extracting data
+|   └── save.py                       # CSV export logic
+|   └── scraper.py                    # Flight scraping 
 │
 ├── main.py                           # Entry point to run the scraper and notifier
-├── demo.ipynb                        # Jupyter notebook demo
+├── Notebook_implementation.ipynb     # Jupyter notebook demo
 ├── test_selenium.py                  # Test script for Selenium setup
 ├── .env                              # Contains sensitive environment variables (not committed)
 ├── .env.example                      # Example of environment variables required
 ├── .gitignore                        # Ignore .env and other sensitive files
 ├── requirements.txt                  # Python dependencies
 └── README.md                         # Project documentation
+└── config.py                         # Global variables
 ```
 
 ---

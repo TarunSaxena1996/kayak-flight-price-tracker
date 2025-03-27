@@ -1,7 +1,7 @@
 
 from utils.browser import launch_browser
 from utils.scraper import fill_departure_city, fill_destination_city, fill_departure_date, fill_return_date, search_flights,select_new_tab_if_redirected, load_more
-from utils.parcer import extract_data
+from utils.parser import extract_data
 from utils.save import save
 from utils.notifier import notify
 import time
